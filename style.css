@@ -87,6 +87,7 @@ header {
 }
 
 .title {
+    user-select: none;
     font-size: 100px;
     width: 20ch;
     color: #fff;
