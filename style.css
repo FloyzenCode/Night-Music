@@ -82,26 +82,52 @@ header {
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
-    user-select: none;
-    font-size: 100px;
-    width: 20ch;
-    color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: printed-text 3s ease;
+  user-select: none;
+  font-size: 100px;
+  width: 20ch;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: printed-text 3s ease;
 }
 
 @keyframes printed-text {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
+}
+
+@keyframes show-btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .txt {
-    color: #fff;
+  color: #fff;
+}
+
+.gotolisten-btn {
+  opacity: 0;
+  color: #fff;
+  
+  font-weight: 300;
+  animation: show-btn .2s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  width: 100%;
+  
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
 }
